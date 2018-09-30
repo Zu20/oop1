@@ -1,0 +1,89 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 30, 2018 at 09:33 PM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `db_list`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `username` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `password`) VALUES
+('john', '2345');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_list`
+--
+
+CREATE TABLE `tbl_list` (
+  `ID` int(11) NOT NULL,
+  `fname` varchar(50) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  `age` int(11) NOT NULL,
+  `telephone` int(20) NOT NULL,
+  `DOB` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_list`
+--
+
+INSERT INTO `tbl_list` (`ID`, `fname`, `gender`, `age`, `telephone`, `DOB`) VALUES
+(3, 'lhklo', 'jk;o', 9, 0, 0),
+(4, 'oloi', 'male', 78, 9876789, 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_list`
+--
+ALTER TABLE `tbl_list`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_list`
+--
+ALTER TABLE `tbl_list`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
